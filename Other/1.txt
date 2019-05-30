@@ -1,0 +1,59 @@
+for(int index=0;index<800;index++){
+                     //doSometing
+                	 if(latitude[index]!=0){
+                		 
+                		 if(x1>latitude[index]){
+                		 for(;x1>latitude[index];x1--){
+                			setX((int)(getHeight()/Max)*(int)x1);	 
+                		 repaint();
+                		 try {
+							Thread.sleep(timer);
+						} catch (InterruptedException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}}
+                		 }
+                		 else{
+                			 for(;x1<latitude[index];x1++){
+                     			setX((int)(getHeight()/Max)*(int)x1);	  
+                			 repaint();
+                			 try {
+								Thread.sleep(timer);
+							} catch (InterruptedException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}}
+                		 }
+                		 setX((int)(getHeight()/Max)*(int)latitude[index]);
+                		 x1=(int)latitude[index];
+                		 repaint();
+                		 
+                	 }
+                	 if(longitude[index]!=0){
+                		
+                		 if(y1>longitude[index]){
+                    		 for(;y1>longitude[index];y1--){
+                    			setY((int)(getWidth()/Max2)*(int)y1);	 
+                    		 repaint();
+                    		 try {
+								Thread.sleep(timer);
+							} catch (InterruptedException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}}
+                    		 }
+                    		 else{
+                    			 for(;y1<longitude[index];y1++){
+                         			setY((int)(getWidth()/Max2)*(int)y1);	  
+                    			 repaint();
+                    			 try {
+									Thread.sleep(timer);
+								} catch (InterruptedException e) {
+									// TODO Auto-generated catch block
+									e.printStackTrace();
+								}}
+                    		 }
+                	 setY((int)(getWidth()/Max2)*(int)longitude[index]);
+                	  y1=(int)longitude[index];
+                	 repaint();
+                	 }
